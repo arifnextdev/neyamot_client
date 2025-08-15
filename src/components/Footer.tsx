@@ -1,114 +1,202 @@
 import React from 'react';
+import Link from 'next/link';
+import { Server, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+import { BUSINESS_INFO } from '@/lib/constants/business';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-black text-gray-300 pt-16 pb-10 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-        {/* Company Info */}
-        <div>
-          <h2 className="text-xl font-bold text-white mb-4">Alpha Net</h2>
-          <p className="text-sm text-gray-400 mb-4">
-            Reliable hosting solutions for startups, developers, and
-            enterprises. Powering growth since 2001.
-          </p>
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Alpha Net. All rights reserved.
-          </p>
-        </div>
-
-        {/* Services */}
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="/hosting" className="hover:text-blue-500">
-                Web Hosting
-              </a>
-            </li>
-            <li>
-              <a href="/vps" className="hover:text-blue-500">
-                VPS Hosting
-              </a>
-            </li>
-            <li>
-              <a href="/dedicated-server" className="hover:text-blue-500">
-                Dedicated Servers
-              </a>
-            </li>
-            <li>
-              <a href="/cloud" className="hover:text-blue-500">
-                Cloud Hosting
-              </a>
-            </li>
-            <li>
-              <a href="/email" className="hover:text-blue-500">
-                Business Email
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Support */}
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="/contact" className="hover:text-blue-500">
-                Contact Us
-              </a>
-            </li>
-            <li>
-              <a href="/about" className="hover:text-blue-500">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="/blog" className="hover:text-blue-500">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="/faq" className="hover:text-blue-500">
-                FAQs
-              </a>
-            </li>
-            <li>
-              <a href="/privacy-policy" className="hover:text-blue-500">
-                Privacy Policy
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Contact */}
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-4">
-            Get in Touch
-          </h3>
-          <ul className="space-y-3 text-sm text-gray-400">
-            <li>📍 Block-C, Sayed Nagar, Vatara, Dhaka-1212</li>
-            <li>
-              📞{' '}
-              <a href="tel:+8801724097877" className="hover:text-blue-500">
-                +8801724097877
-              </a>
-            </li>
-            <li>
-              ✉️{' '}
+    <footer className="bg-muted/30 border-t">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="flex items-center space-x-2 mb-4">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                <Server className="h-5 w-5" />
+              </div>
+              <span className="text-xl font-bold text-foreground">{BUSINESS_INFO.name}</span>
+            </Link>
+            <p className="text-sm text-muted-foreground mb-6 max-w-xs">
+              {BUSINESS_INFO.description}
+            </p>
+            
+            {/* Social Links */}
+            <div className="flex space-x-4">
               <a
-                href="mailto:arif171042@gmail.com"
-                className="hover:text-blue-500"
+                href={BUSINESS_INFO.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Facebook"
               >
-                arif171042@gmail.com
+                <Facebook className="h-5 w-5" />
               </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+              <a
+                href={BUSINESS_INFO.social.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a
+                href={BUSINESS_INFO.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href={BUSINESS_INFO.social.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
 
-      {/* Bottom Footer */}
-      <div className="mt-10 border-t border-gray-700 pt-6 text-sm text-center text-gray-500">
-        Made with ❤️ by Alpha Net. Powered by modern web technology.
+          {/* Services */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground mb-4">Hosting Services</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/services/hosting" className="text-muted-foreground hover:text-primary transition-colors">
+                  Web Hosting
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/vps" className="text-muted-foreground hover:text-primary transition-colors">
+                  VPS Hosting
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/domain" className="text-muted-foreground hover:text-primary transition-colors">
+                  Domain Registration
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/email" className="text-muted-foreground hover:text-primary transition-colors">
+                  Business Email
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/sms" className="text-muted-foreground hover:text-primary transition-colors">
+                  SMS Service
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support & Company */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground mb-4">Support & Company</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/help" className="text-muted-foreground hover:text-primary transition-colors">
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link href="/status" className="text-muted-foreground hover:text-primary transition-colors">
+                  System Status
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                  Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground mb-4">Get in Touch</h3>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start space-x-3">
+                <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground">
+                  {BUSINESS_INFO.contact.address.line1}<br />
+                  {BUSINESS_INFO.contact.address.line2}<br />
+                  Bangladesh
+                </span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Phone className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                <a
+                  href={`tel:${BUSINESS_INFO.contact.phone}`}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {BUSINESS_INFO.contact.phone}
+                </a>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Mail className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                <a
+                  href={`mailto:${BUSINESS_INFO.contact.email}`}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {BUSINESS_INFO.contact.email}
+                </a>
+              </li>
+            </ul>
+
+            {/* Trust Badge */}
+            <div className="mt-6 p-3 bg-primary/5 rounded-lg border border-primary/10">
+              <div className="flex items-center space-x-2">
+                <div className="h-2 w-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-xs font-medium text-primary">99.9% Uptime Guaranteed</span>
+              </div>
+              <p className="text-xs text-muted-foreground mt-1">24/7 Expert Support</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="mt-12 border-t border-border pt-8">
+          <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
+            <div className="flex flex-col space-y-2 text-center md:flex-row md:space-y-0 md:space-x-6 md:text-left">
+              <p className="text-xs text-muted-foreground">
+                © {currentYear} {BUSINESS_INFO.name}. All rights reserved.
+              </p>
+              <div className="flex space-x-4 text-xs">
+                <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                  Terms of Service
+                </Link>
+                <Link href="/cookies" className="text-muted-foreground hover:text-primary transition-colors">
+                  Cookie Policy
+                </Link>
+              </div>
+            </div>
+            <div className="flex items-center space-x-2 text-xs text-muted-foreground">
+              <span>Powered by</span>
+              <span className="font-medium text-primary">Next.js</span>
+              <span>&</span>
+              <span className="font-medium text-primary">Vercel</span>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
