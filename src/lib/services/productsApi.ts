@@ -53,7 +53,7 @@ interface IGetUsersResponse {
 
 export const productsApi = createApi({
   reducerPath: 'productsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: `${process.env.NEXT_PUBLIC_API_URL}/` }),
   tagTypes: ['Products'],
   endpoints: (builder) => ({
     getProducts: builder.query<IGetUsersResponse, IGetProductParams>({

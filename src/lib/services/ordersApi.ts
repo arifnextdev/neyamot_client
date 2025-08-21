@@ -137,7 +137,7 @@ interface OrderResponse {
 export const ordersApi = createApi({
   reducerPath: 'ordersApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:3001/',
+    baseUrl: `${process.env.NEXT_PUBLIC_API_URL}/` || 'http://localhost:3001/',
     credentials: 'include',
   }),
   tagTypes: ['Orders'],

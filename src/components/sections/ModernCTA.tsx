@@ -56,10 +56,10 @@ const ModernCTA = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Button 
             size="lg" 
-            className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-semibold group"
+            className="bg-white !text-primary hover:bg-white/90 px-8 py-4 text-lg font-semibold group"
             asChild
           >
-            <Link href="/services/hosting">
+            <Link href="/services/hosting" className=''>
               <Zap className="mr-2 h-5 w-5" />
               Start Hosting Now
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -69,7 +69,7 @@ const ModernCTA = () => {
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold"
+            className="border-white/30 text-primary dark:text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold"
             asChild
           >
             <Link href="/contact">

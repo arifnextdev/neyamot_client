@@ -10,7 +10,7 @@ export interface IUser {
   avatar?: string | null;
 }
 
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/';
 
 export const authApi = createApi({
   reducerPath: 'authApi',

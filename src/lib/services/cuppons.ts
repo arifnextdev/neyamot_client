@@ -33,7 +33,7 @@ interface IGetUsersResponse {
 
 export const cupponsApi = createApi({
   reducerPath: 'cupponsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: `${process.env.NEXT_PUBLIC_API_URL}/` }),
   tagTypes: ['Coupons'],
   endpoints: (builder) => ({
     getCuppons: builder.query<IGetUsersResponse, IGetUsersParams>({

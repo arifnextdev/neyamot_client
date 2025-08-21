@@ -331,7 +331,7 @@ interface ICreateUser {
 
 export const usersApi = createApi({
   reducerPath: 'usersApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: `${process.env.NEXT_PUBLIC_API_URL}/` }),
   tagTypes: ['Users'],
   endpoints: (builder) => ({
     getUsers: builder.query<IGetUsersResponse, IGetUsersParams>({
