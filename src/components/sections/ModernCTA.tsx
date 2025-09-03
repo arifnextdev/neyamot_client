@@ -21,32 +21,32 @@ const ModernCTA = () => {
         </div>
 
         {/* Main heading */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 dark:text-white">
           Ready to Launch Your
-          <span className="block">Dream Website?</span>
+          <span className="block dark:text-white">Dream Website?</span>
         </h2>
 
         {/* Subheading */}
-        <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed dark:text-white">
           Join thousands of successful businesses that trust Neyamot Enterprise 
           for their hosting needs. Get started today with our premium hosting solutions.
         </p>
 
         {/* Features list */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 max-w-2xl mx-auto">
-          <div className="flex items-center text-primary-foreground/90">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 max-w-2xl mx-auto dark:text-white">
+          <div className="flex items-center text-primary-foreground/90 dark:text-white">
             <CheckCircle className="h-5 w-5 mr-3 text-green-300" />
             <span>99.9% Uptime Guarantee</span>
           </div>
-          <div className="flex items-center text-primary-foreground/90">
+          <div className="flex items-center text-primary-foreground/90 dark:text-white">
             <CheckCircle className="h-5 w-5 mr-3 text-green-300" />
             <span>24/7 Expert Support</span>
           </div>
-          <div className="flex items-center text-primary-foreground/90">
+          <div className="flex items-center text-primary-foreground/90 dark:text-white">
             <CheckCircle className="h-5 w-5 mr-3 text-green-300" />
             <span>Free SSL & Migration</span>
           </div>
-          <div className="flex items-center text-primary-foreground/90">
+          <div className="flex items-center text-primary-foreground/90 dark:text-white">
             <CheckCircle className="h-5 w-5 mr-3 text-green-300" />
             <span>30-Day Money Back</span>
           </div>
@@ -79,7 +79,7 @@ const ModernCTA = () => {
         </div>
 
         {/* Trust indicators */}
-        <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-primary-foreground/80">
+        <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-primary-foreground/80 dark:text-white">
           <div className="flex items-center">
             <Star className="h-4 w-4 mr-1 text-yellow-300" />
             <span>4.9/5 Customer Rating</span>
@@ -91,8 +91,8 @@ const ModernCTA = () => {
         </div>
 
         {/* Urgency message */}
-        <div className="mt-8 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
-          <p className="text-sm text-primary-foreground/90">
+        <div className="mt-8 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 dark:bg-black/10 dark:border-white/20">
+          <p className="text-sm text-primary-foreground/90 dark:text-white">
             🔥 <strong>Special Launch Pricing:</strong> Save 50% on your first year. 
             Offer expires in <span className="font-semibold">7 days</span>!
           </p>
