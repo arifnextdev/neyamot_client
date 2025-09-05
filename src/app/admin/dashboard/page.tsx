@@ -97,7 +97,7 @@ export default function AdminDashboard() {
       <Card className="col-span-1">
         <CardContent className="p-4">
           <h2 className="text-lg font-semibold">Total Revenue</h2>
-          <p className="text-2xl font-bold">${kpis.revenue.toFixed(2)}</p>
+          <p className="text-2xl font-bold">${kpis.orders && kpis.revenue.toFixed(2)}</p>
         </CardContent>
       </Card>
 
@@ -135,7 +135,7 @@ export default function AdminDashboard() {
                 fill="#8884d8"
                 label
               >
-                {statusData.map((entry, index) => (
+                {statusData.length > 0 && statusData.map((entry, index) => (
                   <Cell
                     key={`cell-${index}`}
                     fill={COLORS[index % COLORS.length]}
