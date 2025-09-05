@@ -33,7 +33,7 @@ export default function OAuthCallback() {
       dispatch(setAuth({ token, user }));
 
       router.push(
-        user.roles.includes('admin') ? '/admin/dashboard' : `/users/${user.id}`,
+        user.roles.includes('ADMIN') ? '/admin/dashboard' : `/`,
       );
       toast.success('Logged in successfully');
     } else if (isError) {
