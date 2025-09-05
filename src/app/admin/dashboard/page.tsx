@@ -14,6 +14,7 @@ import {
   Legend,
 } from 'recharts';
 import { Skeleton } from '@/components/ui/skeleton';
+import { NEXT_PUBLIC_API_URL } from '@/lib/config';
 
 const COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff8042'];
 
@@ -42,9 +43,9 @@ export default function AdminDashboard() {
   useEffect(() => {
     async function fetchDashboardData() {
       const [kpiRes, orderRes, statusRes] = await Promise.all([
-        fetch('/api/admin/kpis'),
-        fetch('/api/admin/orders/chart'),
-        fetch('/api/admin/orders/status'),
+        fetch(`${NEXT_PUBLIC_API_URL}/orders/admin/kpis`),
+        fetch(`${NEXT_PUBLIC_API_URL}/orders/admin/monthly-stats`),
+        fetch(`${NEXT_PUBLIC_API_URL}/orders/admin/status-stats`),
       ]);
 
       const [kpis, orderData, statusData] = await Promise.all([
