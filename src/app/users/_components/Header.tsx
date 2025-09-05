@@ -12,9 +12,21 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Bell, ChevronDown } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useRouter } from 'next/navigation';
+import { useLogoutMutation } from '@/lib/services/auth';
 
 const Header = () => {
   const router = useRouter();
+
+  const [logout] = useLogoutMutation();
+
+  const handleLogout = () => {
+    logout()
+      .unwrap()
+      .then(() => {
+        router.push('/');
+      });
+  };
+
   return (
     <header className="border-b backdrop-blur">
       <div className="container mx-auto flex h-16 items-center px-4 lg:px-6">
@@ -34,7 +46,7 @@ const Header = () => {
           <Button variant="ghost" size="icon" className="">
             <Bell className="h-4 w-4" />
           </Button>
-          <DropdownMenu>
+              <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="flex items-center space-x-2 ">
                 <Avatar className="h-8 w-8">
@@ -64,7 +76,7 @@ const Header = () => {
                 Settings
               </DropdownMenuItem>
               <DropdownMenuSeparator className="bg-gray-700" />
-              <DropdownMenuItem className="hover:bg-gray-700 text-gray-200">
+              <DropdownMenuItem className="hover:bg-gray-700 text-gray-200" onClick={handleLogout}>
                 Logout
               </DropdownMenuItem>
             </DropdownMenuContent>
