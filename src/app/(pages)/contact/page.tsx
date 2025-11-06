@@ -51,22 +51,22 @@ export default function ContactPage() {
   };
 
   const supportChannels = [
-    {
-      icon: <MessageCircle className="h-6 w-6" />,
-      title: 'Live Chat',
-      description: 'Instant support for urgent issues',
-      availability: '24/7 Available',
-      action: 'Start Chat',
-      href: '#',
-      primary: true,
-    },
+    // {
+    //   icon: <MessageCircle className="h-6 w-6" />,
+    //   title: 'Live Chat',
+    //   description: 'Instant support for urgent issues',
+    //   availability: '24/7 Available',
+    //   action: 'Start Chat',
+    //   href: '#',
+    //   primary: true,
+    // },
     {
       icon: <Phone className="h-6 w-6" />,
       title: 'Phone Support',
       description: 'Speak directly with our experts',
       availability: 'Mon-Fri 9AM-6PM (GMT+6)',
       action: 'Call Now',
-      href: 'tel:+8801712345678',
+      href: 'tel:+880961077877',
       primary: false,
     },
     {
@@ -75,7 +75,7 @@ export default function ContactPage() {
       description: 'Detailed technical assistance',
       availability: 'Response within 2 hours',
       action: 'Send Email',
-      href: 'mailto:support@alphanet.com',
+      href: 'mailto:support@neyamotenterprise.com',
       primary: false,
     },
   ];

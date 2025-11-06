@@ -11,9 +11,9 @@ export const BUSINESS_INFO = {
       line1: 'Ka-124, Darjibarir Moor, Uttarpara',
       line2: 'Khilkhet, Dhaka-1229, Bangladesh'
     },
-    phone: '+88 09677220022',
+    phone: '+88 09610778877',
     mobile: '+88 01820020022',
-    email: 'supports@neyamotenterprise.com',
+    email: 'support@neyamotenterprise.com',
     website: 'https://neyamotenterprise.com'
   },
   social: {
