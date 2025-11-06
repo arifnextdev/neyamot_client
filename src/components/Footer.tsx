@@ -136,7 +136,6 @@ const Footer = () => {
                 <span className="text-muted-foreground">
                   {BUSINESS_INFO.contact.address.line1}<br />
                   {BUSINESS_INFO.contact.address.line2}<br />
-                  Bangladesh
                 </span>
               </li>
               <li className="flex items-center space-x-3">

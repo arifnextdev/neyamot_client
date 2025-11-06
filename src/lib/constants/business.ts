@@ -13,7 +13,7 @@ export const BUSINESS_INFO = {
     },
     phone: '+88 09677220022',
     mobile: '+88 01820020022',
-    email: 'info@neyamotenterprise.com',
+    email: 'supports@neyamotenterprise.com',
     website: 'https://neyamotenterprise.com'
   },
   social: {

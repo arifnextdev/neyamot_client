@@ -26,7 +26,7 @@ const StatsSection = () => {
     },
     {
       icon: <Award className="h-8 w-8" />,
-      number: "5 Years",
+      number: "10 Years",
       label: "Industry Experience",
       description: "Serving Bangladesh's digital transformation",
       color: "text-orange-500"
